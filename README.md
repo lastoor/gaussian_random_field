@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a d-dimensional stationary Gaussian random field (GRF) generator, using circulant embedding method. By defining the covariance function, we can generate any kind of stationary GRFs. Particularly, by choosing a specific covariance function and add a trend, we can generate fractional Brownian motion (fBm) fields.
+This is a d-dimensional stationary Gaussian random field (GRF) generator, using circulant embedding method [1]. By defining the covariance function, we can generate any kind of stationary GRFs. Particularly, by choosing a specific covariance function and add a trend, we can generate fractional Brownian motion (fBm) fields [2].
 
 ## Usage
 
