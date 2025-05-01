@@ -9,7 +9,7 @@ This is a d-dimensional stationary Gaussian random field (GRF) generator, using 
 We use fBm field generation as an example. 
 
 1. Define the covariance function as a class.
-'''
+```python
 class PrefbmCov:
     def __init__(self, alpha):
         self.alpha = alpha
@@ -25,11 +25,10 @@ class PrefbmCov:
             return α*(2-α)/18 * (2-r)**3 / r
         else:
             return 0.0
-'''
+```
 
 2. Define parameters.
-
-'''
+```python
 alpha = 0.5
 num_pt = 512
 '''
@@ -41,10 +40,10 @@ pts=(np.linspace(0,1,num_pt),)*2
 mean = np.zeros((num_pt,num_pt))
 prefbm_gen = GaussianRandomFieldCircEmbed(mean, cov, pts, minpadding=256)
 prefbm = prefbm_gen.sample()
-'''
+```
 
 4. Add a trend to make it a fbm field
-'''
+```
 c2 = alpha * (5 + 2 * alpha) / 18
 sigma = np.sqrt(2 * c2)
 coords = np.meshgrid(*pts, indexing="ij")
@@ -52,7 +51,7 @@ X = np.random.normal(loc=0.0, scale=sigma, size=len(coords))
 trend = sum(xi_coord * Xi for xi_coord, Xi in zip(coords, X))
 fbm_field = prefbm + trend
 plt.imshow(fbm_field)
-'''
+```
 
 ## Ensemble Statistics Test
 See `fbm_stats.ipynb`.
