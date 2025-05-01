@@ -39,7 +39,7 @@ cov = PrefbmCov(alpha)
 pts=(np.linspace(0,1,num_pt),)*2
 mean = np.zeros((num_pt,num_pt))
 prefbm_gen = GaussianRandomFieldCircEmbed(mean, cov, pts, minpadding=256)
-prefbm = prefbm_gen.sample()
+prefbm_field = prefbm_gen.sample()
 ```
 
 4. Add a trend to make it a fbm field
@@ -49,7 +49,7 @@ sigma = np.sqrt(2 * c2)
 coords = np.meshgrid(*pts, indexing="ij")
 X = np.random.normal(loc=0.0, scale=sigma, size=len(coords))
 trend = sum(xi_coord * Xi for xi_coord, Xi in zip(coords, X))
-fbm_field = prefbm + trend
+fbm_field = prefbm_field + trend
 plt.imshow(fbm_field)
 ```
 
@@ -67,6 +67,6 @@ All credit for the original algorithm and implementation goes to the original au
 
 ## References
 
-[1] [Wood, A. T. A., & Chan, G. (1994). *Simulation of stationary Gaussian processes in* $[0, 1]^d$. *Journal of Computational and Graphical Statistics*, **3**(4), 409–432.](https://www.tandfonline.com/doi/abs/10.1080/10618600.1994.10474655)
+[1] [Wood, A. T. A., & Chan, G. (1994). *Simulation of stationary Gaussian processes in [0, 1]*$^d$. *Journal of Computational and Graphical Statistics*, **3**(4), 409–432.](https://www.tandfonline.com/doi/abs/10.1080/10618600.1994.10474655)
 
 [2] [Stein, M. L. (2002). *Fast and exact simulation of fractional Brownian surfaces*. *Journal of Computational and Graphical Statistics*, **11**(3), 587–599.](https://www.tandfonline.com/doi/abs/10.1198/106186002466)
