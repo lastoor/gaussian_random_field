@@ -31,10 +31,10 @@ class PrefbmCov:
 ```python
 alpha = 0.5
 num_pt = 512
-'''
+```
 
 3. Initialize GRF generator and generate a pre-fBm field.
-'''
+```python
 cov = PrefbmCov(alpha)
 pts=(np.linspace(0,1,num_pt),)*2
 mean = np.zeros((num_pt,num_pt))
@@ -43,7 +43,7 @@ prefbm = prefbm_gen.sample()
 ```
 
 4. Add a trend to make it a fbm field
-```
+```python
 c2 = alpha * (5 + 2 * alpha) / 18
 sigma = np.sqrt(2 * c2)
 coords = np.meshgrid(*pts, indexing="ij")
@@ -67,6 +67,6 @@ All credit for the original algorithm and implementation goes to the original au
 
 ## References
 
-[1] Wood, A. T. A., & Chan, G. (1994). [Simulation of stationary Gaussian processes in $[0, 1]^d$](https://www.tandfonline.com/doi/abs/10.1080/10618600.1994.10474655). *Journal of Computational and Graphical Statistics*, **3**(4), 409–432.
+[1] [Wood, A. T. A., & Chan, G. (1994). *Simulation of stationary Gaussian processes in* $[0, 1]^d$. *Journal of Computational and Graphical Statistics*, **3**(4), 409–432.](https://www.tandfonline.com/doi/abs/10.1080/10618600.1994.10474655)
 
-[2] Stein, M. L. (2002). [Fast and exact simulation of fractional Brownian surfaces](https://www.tandfonline.com/doi/abs/10.1198/106186002466). *Journal of Computational and Graphical Statistics*, **11**(3), 587–599.
+[2] [Stein, M. L. (2002). *Fast and exact simulation of fractional Brownian surfaces*. *Journal of Computational and Graphical Statistics*, **11**(3), 587–599.](https://www.tandfonline.com/doi/abs/10.1198/106186002466)
