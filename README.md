@@ -68,6 +68,6 @@ All credit for the original algorithm and implementation goes to the original au
 
 ## References
 
-[1] Wood, Andrew T. A., and Grace Chan. *Simulation of stationary Gaussian processes in* $[0, 1]^d$. [Journal of Computational and Graphical Statistics]([https://doi.org/10.1080/10618600.1994.10474645](https://www.jstor.org/stable/pdf/1390903.pdf?casa_token=9qCXJLCyyr0AAAAA:dYhwwRgPD4Wlwgt5at3QCh-KQ9ITe6n_lZWP5wVg3cRLQ-VvTSs3auQA5b0j-t9WjvWnpilTLCc41vzxEKg7mz3pXz5iNypkbXQEZfzt5APwnpbg8E4)), **3**(4), 1994, pp. 409–432.
+[1] Wood, A. T. A., & Chan, G. (1994). [Simulation of stationary Gaussian processes in $[0, 1]^d$](https://www.tandfonline.com/doi/abs/10.1080/10618600.1994.10474655). *Journal of Computational and Graphical Statistics*, **3**(4), 409–432.
 
-[2] Stein, Michael L. *Fast and exact simulation of fractional Brownian surfaces*. [Journal of Computational and Graphical Statistics]([https://doi.org/10.1198/106186002466](https://www.tandfonline.com/doi/abs/10.1198/106186002466?casa_token=-vs_WpHakr8AAAAA:Y1o5qO1REB3p0hRXBpEzMzs2KdB3px-BEFn1pi9YBq8rCJAyBNQsKHIhavkwiUKa2gAJo9nyLeDC)), **11**(3), 2002, pp. 587–599.
+[2] Stein, M. L. (2002). [Fast and exact simulation of fractional Brownian surfaces](https://www.tandfonline.com/doi/abs/10.1198/106186002466). *Journal of Computational and Graphical Statistics*, **11**(3), 587–599.
