@@ -54,13 +54,13 @@ plt.imshow(fbm_field)
 ```
 
 ## Ensemble Statistics Test
-See `fbm_stats.ipynb`.
+See `grf_generation_and_test.ipynb`.
 
 ## Acknowledgment
 
 This project is a Python translation of the Julia implementation from:
 
-- GaussianRandomFields.jl (https://github.com/PieterjanRobbe/GaussianRandomFields.jl) by PieterjanRobbe
+- [GaussianRandomFields.jl](https://github.com/PieterjanRobbe/GaussianRandomFields.jl) by PieterjanRobbe
 
 The original project is licensed under the MIT license.  
 All credit for the original algorithm and implementation goes to the original authors.
