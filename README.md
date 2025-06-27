@@ -11,26 +11,15 @@ We use fBm field generation as an example.
 1. Define the covariance function as a class.
 ```python
 class PrefbmCov:
-    def __init__(self, alpha):
-        self.alpha = alpha
-        self.is_even = True
-    def __call__(self, x):
-        r = np.linalg.norm(x)
-        α = self.alpha
-        if r == 0:
-            return 1 - α/6 - α**2/6
-        if r <= 1:
-            return 1 - α/6 - α**2/6 - r**α + α*(5+2*α)*r**2/18
-        elif r <= 2:
-            return α*(2-α)/18 * (2-r)**3 / r
-        else:
-            return 0.0
 ```
 
 2. Define parameters.
 ```python
-alpha = 0.5
-num_pt = 512
+hurst = 0.95
+alpha = hurst * 2
+c = 1
+num_pt = 100
+minpadding = 0
 ```
 
 3. Initialize GRF generator and generate a pre-fBm field.
